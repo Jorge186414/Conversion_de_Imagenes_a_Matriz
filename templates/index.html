@@ -9,11 +9,21 @@
 
 <body>
   <h1>Cargar imagen</h1>
-  <form action="/upload" method="POST" enctype="multipart/form-data">
+
+  <form id="upload-form" enctype="multipart/form-data">
     <label for="file">Seleccione una imagen:</label>
-    <input type="file" name="file" id="file" accept="image/*">
+    <input type="file" name="archivo" id="file" accept="image/*" required>
     <button type="submit">Subir y procesar</button>
   </form>
+
+  <div id='contenedor_imagenes' src="#">
+    <h3>Imagen Original</h3>
+    <img id="imagen_original" src="#" alt="">
+
+    <h3>Imagen Blanco y Negro</h3>
+    <img id="imagen_blanco_negro" src="#" alt="">
+  </div>
+
 </body>
 
 </html>
