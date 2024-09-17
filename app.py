@@ -50,9 +50,5 @@ def cargar_imagen():
       'Matriz_de_Imagen': matriz_blanco_negro
     })
 
-@app.route('/uploads/<filename>')
-def uploaded_file(filename):
-    return send_from_directory(app.config['imagenes'], filename)
-
 if __name__ == '__main__':
     app.run(debug=True)
