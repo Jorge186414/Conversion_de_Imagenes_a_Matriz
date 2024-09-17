@@ -42,13 +42,12 @@ def cargar_imagen():
     imagen_blanco_negro.save(imagen_blanco_negro_path)
 
     matriz_blanco_negro = np.array(imagen_blanco_negro)
-
     matriz_blanco_negro = matriz_blanco_negro.tolist()
 
     return jsonify({
-        'Imagen_Original': archivo.filename,
-        'Imagen_Blanco_Negro': 'bn_' + archivo.filename,
-        'Matriz_de_Imagen': matriz_blanco_negro
+      'Imagen_Original': archivo.filename,
+      'Imagen_Blanco_Negro': 'bn_' + archivo.filename,
+      'Matriz_de_Imagen': matriz_blanco_negro
     })
 
 @app.route('/uploads/<filename>')
