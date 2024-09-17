@@ -12,18 +12,24 @@
 
   <form id="upload-form" enctype="multipart/form-data">
     <label for="file">Seleccione una imagen:</label>
-    <input type="file" name="archivo" id="file" accept="image/*" required>
+    <input type="file" name="archivo" id="archivo" accept="image/*" required>
     <button type="submit">Subir y procesar</button>
   </form>
 
   <div id='contenedor_imagenes' src="#">
     <h3>Imagen Original</h3>
-    <img id="imagen_original" src="#" alt="">
+    <img id="imagen_original" src="#" alt="imagen_original" style="display: none;">
 
     <h3>Imagen Blanco y Negro</h3>
-    <img id="imagen_blanco_negro" src="#" alt="">
+    <img id="imagen_blanco_negro" src="#" alt="imagen_blanco_negro" style="display: none;">
   </div>
 
+  <div id="contenedor_resultado">
+    <h3 id="resultado" style="display: none;">Resultado</h3>
+    <div id="contenedor_matriz"></div>
+  </div>
+
+  <script src="/static/js/main.js"></script>
 </body>
 
 </html>
